@@ -51,7 +51,8 @@ export default {
     transform: translateY(100%);
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgb(255, 168, 168) 10%, rgb(252, 255, 0) 100%);
+    /* background: linear-gradient(to top right , #dcccff , #853ee8); */
+    background-color: red;
     top: 0;
     left: 0;
     z-index: 10;
@@ -67,4 +68,9 @@ export default {
 .swipe-up {
     transform: translateY(0);
 }
+
+.heatmap-cell:hover{
+    cursor: pointer;
+}
+
 </style>

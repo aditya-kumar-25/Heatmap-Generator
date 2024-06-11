@@ -32,11 +32,16 @@ import InputGrid from './InputGrid.vue';
     width: 80%;
     column-gap:1rem;
     row-gap: 1rem;
-    /* border-right: 2px solid gray; */
 }
 
 .generate-button{
     margin-top: 20px;
+}
+
+@media screen and (max-width:500px) {
+    .input-data-container{
+        padding:0.1rem;
+    }
 }
 
 </style>

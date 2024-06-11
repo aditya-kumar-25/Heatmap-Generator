@@ -1,6 +1,6 @@
 <template>
     <input class="input-grid" :class="[active === 1 ? 'active' : '']" type="number" min="0" max="100"
-        v-model="gridValue" @input="setData(index, gridValue)">
+        v-model="gridValue" @input="setData(index, gridValue)" @click="gridValue=''">
 </template>
 
 
@@ -29,6 +29,17 @@ export default {
     background: linear-gradient(to right, #e7ecf1, #ffffff);
     transition: all linear 100ms;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media screen and (max-width:768px){
+    .input-grid{
+        font-size: medium;
+    }
+}
+@media screen and (max-width:400px){
+    .input-grid{
+        font-size:small;
+    }
 }
 
 .input-grid:hover {

@@ -4,8 +4,9 @@
         <h1>Heatmap</h1>
         <p class="secondary-text"> Below is the generated heatmap for given input</p>
 
-        <div class="heatmap-container" >
-            <HeatmapCell v-for="(num, index) in data" :data="num" :key="index" :index="index"  @mouseenter="updateHovered(index , 1)" @mouseleave="updateHovered(index , 0)" />
+        <div class="heatmap-container">
+            <HeatmapCell v-for="(num, index) in data" :data="num" :key="index" :index="index"
+                @mouseenter="updateHovered(index, 1)" @mouseleave="updateHovered(index, 0)" />
         </div>
 
     </div>
@@ -20,7 +21,7 @@ export default {
     components: {
         HeatmapCell,
     },
-    props: ['data' , 'updateHovered'],
+    props: ['data', 'updateHovered'],
 }
 </script>
 
@@ -50,14 +51,15 @@ export default {
         width: 90%;
         margin-top: 30px;
         padding: 10px;
-        border-left:none;
+        border-left: none;
     }
 
     .output-container {
-    margin-inline: auto;
-    min-height: 100vh;
-    width:90vw;
-}
+        margin-inline: auto;
+        min-height: 100vh;
+        width: 90vw;
+        margin-top: 100px;
+    }
 
 }
 </style>
