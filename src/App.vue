@@ -1,7 +1,7 @@
 <template>
   <Navbar />
   <div class="parent-container">
-    <InputData :hovered="hovered" :setData="setData" />
+    <InputData :hovered="hovered" :setData="setData" :data="data"/>
     <OutputHeatmap :update-hovered="updateHovered" :data="data" />
   </div>
   <Footer />
@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      data: new Array(9).fill(0),
+      data: [0,10,40,0,0,100,0,0,0],
       hovered: new Array(9).fill(0),
     }
   },

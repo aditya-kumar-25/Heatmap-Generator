@@ -1,6 +1,8 @@
 <template>
     <div class="heatmap-cell" :style="cellStyle" @mouseenter="flag = true" @mouseleave="flag = false">
-        <div class="tooltip" :class="[`${flag && 'swipe-up'}`]"><p>{{ data }}</p></div>
+        <div class="tooltip" :class="[`${flag && 'swipe-up'}`]">
+            <p>{{ data }}</p>
+        </div>
     </div>
 </template>
 
@@ -49,19 +51,20 @@ export default {
     transform: translateY(100%);
     width: 100%;
     height: 100%;
-    background-color: red;
+    background: linear-gradient(135deg, rgb(255, 168, 168) 10%, rgb(252, 255, 0) 100%);
     top: 0;
     left: 0;
     z-index: 10;
-    transition: all linear 200ms;
+    transition: all linear 300ms;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color:white;    
+    color: white;
+    font-size: large;
 }
 
-.swipe-up{
+.swipe-up {
     transform: translateY(0);
 }
 </style>

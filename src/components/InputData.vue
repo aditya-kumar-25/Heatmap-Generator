@@ -4,7 +4,7 @@
         <h1>Enter input data</h1>
         <p class="secondary-text">Enter input data to each cell below between <strong>0-100</strong></p>
         <div class="input-data-container">
-            <InputGrid v-for="(_ , index) in new Array(9)" :index="index" :key="index" :setData="setData" :active="hovered[index]" />
+            <InputGrid v-for="(num , index) in data" :index="index" :key="index" :setData="setData" :active="hovered[index]" :num="num" />
         </div>
     </div>
 
@@ -17,7 +17,7 @@ import InputGrid from './InputGrid.vue';
         components:{
             InputGrid,
         },
-        props: ['setData' , 'hovered'],
+        props: ['data' , 'setData' , 'hovered'],
     }
 
 </script>

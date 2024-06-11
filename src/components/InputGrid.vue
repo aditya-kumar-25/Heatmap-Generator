@@ -10,10 +10,10 @@ export default {
     components: {
 
     },
-    props: ['index', 'setData', 'active'],
+    props: ['index', 'setData', 'active' , 'num'],
     data() {
         return {
-            gridValue: 0,
+            gridValue: this.num || 0,
         }
     },
 }
@@ -22,7 +22,6 @@ export default {
 
 <style scoped>
 .input-grid {
-    /* border: 1px solid black; */
     text-align: center;
     aspect-ratio: 1;
     border-radius: 20px;
